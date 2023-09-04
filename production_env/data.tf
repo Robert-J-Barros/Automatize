@@ -1,4 +1,4 @@
 data "aws_acm_certificate" "issued" {
-  domain   = "tf.example.com"
+  domain   = "*.timsmart.com.br"
   statuses = ["ISSUED"]
 }

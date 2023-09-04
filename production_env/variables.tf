@@ -53,10 +53,30 @@ variable "db-instance-class" {
   type = string
   default = ""
 }
+##ELASTIC CACHE
+variable "cache-subnet-id" {
+  description = "Define o id da subnet na qual o cluster redis irá trabalhar "
+  type = list(string)
+  default = ["subnet1", ""]
+}
+variable "cache-node-type" {
+  description = "Define o tamanho da instancia para o cluster redis"
+  type = string
+  default = ""
+}
+variable "cache-port" {
+  description = "Define em qual porta o cluster irá trabalhar"
+  type = int
+  default = ""
+}
+variable "node-groups" {
+  description = "Define o numero de instancias que irão fazer parte do cluster"
+  type = string
+  default = ""
+}
 ## GLOBAL
 variable "region" {
   description = "Define a região para o provider"
   type = string
   default = ""
 }
-
